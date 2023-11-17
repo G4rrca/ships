@@ -11,9 +11,9 @@ class Ship
 public:
     int length;
     string name;
-    bool isSunk;
+    //bool isSunk;
 
-    Ship(int shipType) : isSunk(false)
+    Ship(int shipType) //: isSunk(false)
     {
         switch (shipType)
         {
@@ -456,27 +456,27 @@ int main()
     cout << "---------------------------------------------Вітаємо Вас у грі 'Морський бій'-------------------------------------------" << endl << endl;
     cout << "Для початку оберіть режим гри:\n   1 - гравець проти гравця\n   2 - гравець проти комп'ютера" << endl;
 
-    while (true) 
-    {
-        cin >> game_mode;
+    //while (true) 
+    //{
+      //  cin >> game_mode;
 
-        if (game_mode == 1) 
-        {
-            game = false;
+       // if (game_mode == 1) 
+       // {
+         //   game = false;
 
-            cout << "\nТепер оберіть як бажаєте заповнити ігрове поле, 1 - вручну, 2 - рандомно" << endl;
-            break; 
-        }
-        else if (game_mode == 2)
-        {
-            game = true;
-            break; 
-        }
-        else 
-        {
-            cout << "Неправильне значення. Спробуйте ще раз." << endl;
-        }
-    }   
+           // cout << "\nТепер оберіть як бажаєте заповнити ігрове поле, 1 - вручну, 2 - рандомно" << endl;
+           // break; 
+      //  }
+       // else if (game_mode == 2)
+       // {
+         //   game = true;
+            //break; 
+       //}
+       // else 
+       //{
+       //     cout << "Неправильне значення. Спробуйте ще раз." << endl;
+       // }
+   //}   
 
     cout << "        Розставте кораблі:" << endl;
     cout << " 1 - Авіаносець - розмір 4x1 (" << 1 << " шт.)" << endl;
@@ -491,7 +491,7 @@ int main()
     player1Board.displayBoard("Гравець 1");
 
     cout << "        Гравець 2: Розставте кораблі:" << endl;
-    player2Board.placeShips(player2Board, shipsOfSize1, shipsOfSize2, shipsOfSize3, shipsOfSize4, game);
+    player2Board.placeShips(player2Board, shipsOfSize1, shipsOfSize2, shipsOfSize3, shipsOfSize4, true);
     player2Board.displayBoard("Гравець 2");
 
     //player1HiddenBoard.grid1[6][4] = 'X';
