@@ -1,0 +1,71 @@
+# depslib dependency file v1.0
+1700923330 source:c:\users\dell\desktop\4\main.cpp
+	<iostream>
+	<cstdlib>
+	<windows.h>
+	<thread>
+	"Board.h"
+	"setting.h"
+	"moving.h"
+
+1700922997 source:c:\users\dell\desktop\4\board.cpp
+	"Board.h"
+	<iostream>
+
+1700922997 c:\users\dell\desktop\4\board.h
+	<iostream>
+
+1700923331 source:c:\users\dell\desktop\4\setting.cpp
+	"setting.h"
+	<iostream>
+	<thread>
+
+1700922461 c:\users\dell\desktop\4\setting.h
+	"Board.h"
+	<iostream>
+
+1700923330 source:c:\users\dell\desktop\4\moving.cpp
+	"setting.h"
+	"moving.h"
+	<iostream>
+	<thread>
+
+1700923409 c:\users\dell\desktop\4\moving.h
+	"Board.h"
+	<iostream>
+
+1701093645 source:c:\users\dell\desktop\battleship\board.cpp
+	"Board.h"
+	<iostream>
+
+1701093645 c:\users\dell\desktop\battleship\board.h
+	<iostream>
+
+1701095166 source:c:\users\dell\desktop\battleship\main.cpp
+	<iostream>
+	<cstdlib>
+	<windows.h>
+	<thread>
+	"Board.h"
+	"setting.h"
+	"moving.h"
+
+1701091776 c:\users\dell\desktop\battleship\setting.h
+	"Board.h"
+	<iostream>
+
+1701093645 c:\users\dell\desktop\battleship\moving.h
+	"Board.h"
+	<iostream>
+
+1701094519 source:c:\users\dell\desktop\battleship\moving.cpp
+	"setting.h"
+	"moving.h"
+	<iostream>
+	<thread>
+
+1701094800 source:c:\users\dell\desktop\battleship\setting.cpp
+	"setting.h"
+	<iostream>
+	<thread>
+

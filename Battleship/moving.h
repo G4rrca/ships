@@ -12,6 +12,5 @@ class moving{
         bool mov(int player, Board &board);
         void bot_mov(int player, Board &board, bool shot, int prevHitRow, int prevHitCol);
         void minuss(Board &board);
-
 };
 #endif

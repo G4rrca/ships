@@ -16,6 +16,8 @@ public:
     Board();
     template <typename T, int Size>
     void print_board(T (&board)[Size][Size]);
+    void clearing(int player, Board &board);
+    void minuss(Board &board);
 };
 
 // Визначення шаблону функції print_board

@@ -3,7 +3,7 @@
 #include <thread>
 
 using namespace std;
-bool setting::canPlaceShip(int shipType, int row, int col, char direction, int board[10][10]) { //+
+bool setting::canPlaceShip(int shipType, int row, int col, char direction, int board[10][10]) {
     if (direction == 'V'){
         for (int d = 0; d < shipType; d++) {
             if (board[row+d][col] != -1)
@@ -24,14 +24,14 @@ bool setting::canPlaceShip(int shipType, int row, int col, char direction, int b
     return true;
 }
 
-string setting::retryInput() { //+
+string setting::retryInput() {
     string number;
     cout << "Введіть число заново: ";
     cin >> number;
     return number;
 }
 
-bool setting::valid_set(string& number, int q1[5], int board[10][10], char board1[11][11], bool human) { //+
+bool setting::valid_set(string& number, int q1[5], int board[10][10], char board1[11][11], bool human) {
     char ship_typ = number[0]; char ro = number[1]; char co = number[2]; char direction = number[3];
     int row = ro - 'A';
     int col = co - '0';
@@ -133,7 +133,7 @@ void setting::sett(int player, Board &board){ //+
                 memcpy(board33, board.board22, sizeof(board33));
                 memcpy(ship, board.p2, sizeof(ship));
             }
-
+             system("cls");
             for (int t = 0; t < 1; t++) {
                   "/n";
                 cout << "        Гравець номер " << player << endl;
@@ -144,7 +144,10 @@ void setting::sett(int player, Board &board){ //+
                 cout << " Есмінець - розмір 1x1 (" << ship[0] << " шт.)" << endl << "\n";
                 cout << " Кораблі розміщуються по горизонталі, введіть координату де буде розміщено лівий край судна " << endl;
             }
+            board.print_board(board33);
             cin >> number;
+             system("cls");
+
             number[1] = toupper(number[1]);
             number[3] = toupper(number[3]);
             direction = number[3];
@@ -165,7 +168,7 @@ void setting::sett(int player, Board &board){ //+
 
                 }  else {
                     valid_set(number, ship, board3, board33, 1);
-//                    system("cls");
+                   system("cls");
                 }
 
 
@@ -189,19 +192,16 @@ void setting::bot_sett(int player, Board &board) {
     int ship_type;
     int ship[5];
 
- if (player == 1) {
-                memcpy(board3, board.board1, sizeof(board3));
-                memcpy(board33, board.board11, sizeof(board33));
-                memcpy(ship, board.p1, sizeof(ship));
-
-            } else {
-                memcpy(board3, board.board2, sizeof(board3));
-                memcpy(board33, board.board22, sizeof(board33));
-                memcpy(ship, board.p2, sizeof(ship));
-            }
-
+    if (player == 1) {
+        memcpy(board3, board.board1, sizeof(board3));
+        memcpy(board33, board.board11, sizeof(board33));
+        memcpy(ship, board.p1, sizeof(ship));
+    } else {
+        memcpy(board3, board.board2, sizeof(board3));
+        memcpy(board33, board.board22, sizeof(board33));
+        memcpy(ship, board.p2, sizeof(ship));
+    }
     do {
-
         // число від 1 до 5 перетворюється на символ '1' до '5'
         if (ship[4] != 0) {
             number[0] = static_cast<char>(53);
@@ -215,12 +215,10 @@ void setting::bot_sett(int player, Board &board) {
             number[0] = static_cast<char>(49);
         }
 
-
         number[1] = static_cast<char>('A' + rand() % 10);  // випадкова буква від 'A' до 'J'
         number[2] = static_cast<char>((rand() % 10) + 48);  // число від 0 до 9 перетворюється на символ '0' до '9'
 
-    int randomValue = std::rand() % 2;
-
+        int randomValue = std::rand() % 2;
 
         // Assign 'H' or 'V' based on the random value
         if (randomValue == 0) {
@@ -237,7 +235,6 @@ void setting::bot_sett(int player, Board &board) {
 
         // Трансформація типу корабля з char у int
         ship_type = number[0] - '0';
-
 
         if (valid_set(number, ship, board3, board33, 0) == 0) {
             // Якщо розстановка неправильна, повторити цикл
@@ -257,17 +254,15 @@ void setting::bot_sett(int player, Board &board) {
         if (allShipsPlacedCorrectly) {
             break;
         }
-
-
     } while (true);
      if (player == 1) {
-                memcpy(board.board1, board3,  sizeof(board.board1));
-                memcpy(board.board11, board33,  sizeof(board.board11));
-                memcpy(board.p1, ship, sizeof(board.p1));
-            } else {
-                memcpy(board.board2, board3,  sizeof(board.board2));
-                memcpy(board.board22, board33,  sizeof(board.board22));
-                memcpy(board.p2, ship, sizeof(board.p2));
-            }
+        memcpy(board.board1, board3,  sizeof(board.board1));
+        memcpy(board.board11, board33,  sizeof(board.board11));
+        memcpy(board.p1, ship, sizeof(board.p1));
+    } else {
+        memcpy(board.board2, board3,  sizeof(board.board2));
+        memcpy(board.board22, board33,  sizeof(board.board22));
+        memcpy(board.p2, ship, sizeof(board.p2));
+    }
 //        board.print_board(board.board22);
 }

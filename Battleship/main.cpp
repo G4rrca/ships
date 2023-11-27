@@ -8,29 +8,25 @@
 
 using namespace std;
 
-
-void battle()
-{
-      Board board;
-       moving func;
-       setting func2;
+void battle(){
+    Board board;
+    moving MOVE;
+    setting SET;
     int choose;
-    bool choice;
+    bool choice = 0;
     char start;
     bool game =0;
-    cout << "---------------------------------------------Вітаємо Вас у грі 'Морський бій'-------------------------------------------" << endl << endl;
-
+    cout << "---------------------------------------------Вітаємо Вас у грі 'Морський бій'-------------------------------------------" << endl;
         do{
             cout << "                                  Введіть 1, щоб читати правила гри або 2 для її початку: " << endl;
             cout << " " << endl;
             cin >> choose;
-
-            if (choose != 1 && choose != 2){
+        if (choose != 1 && choose != 2){
             cout << "Невірне значення, введіть 1 чи 2" << endl;
             }
 
       } while (choose != 1 && choose != 2);
-system("cls");
+    system("cls");
     if (choose == 1){
         cout << "1. Як розміщувати кораблі? " << endl;
         cout << "   Потрібно ввести 4 символи: " << endl;
@@ -48,11 +44,7 @@ system("cls");
         cin >> start;
     }
 
-
-
-
-
- system("cls");
+    system("cls");
 
     cout << "Для початку оберіть режим гри:\n   1 - гравець проти гравця\n   2 - гравець проти комп'ютера" << endl;
     while (true){
@@ -60,20 +52,18 @@ system("cls");
         if (choose == 1){
                 system("cls");
                 game = 1;
-            do
-            {
-                 cout << "\nГравець 1: оберіть як бажаєте заповнити ігрове поле, 1 - вручну, 2 - рандомно" << endl;
+            do{
+                cout << "\nГравець 1: оберіть як бажаєте заповнити ігрове поле, 1 - вручну, 2 - рандомно" << endl;
                 cin >> choose;
-                if (choose ==1)
-                {
-                    func2.sett(1, board);
+                system("cls");
+                if (choose ==1){
+                    SET.sett(1, board);
                 }
-                else if (choose ==2)
-                {
-                    do
-                    {
-                            func2.bot_sett(1, board);
-                            system("cls");
+                else if (choose ==2){
+                    do{
+                        board.clearing(1, board);
+                        SET.bot_sett(1, board);
+
                         board.print_board(board.board11);
 
                         cout << "Якщо подобається розміщення - введіть 1, якщо ні - то 0" << endl;
@@ -81,60 +71,50 @@ system("cls");
                         system("cls");
 
                     }while (choice != 1);
-
-
                 }
-
-
             } while (choose != 1 && choose !=2);
-             do
-            {
+             do{
                  cout << "\nГравець 2: оберіть як бажаєте заповнити ігрове поле, 1 - вручну, 2 - рандомно" << endl;
                 cin >> choose;
-                if (choose ==1)
-                {
-                    func2.sett(2, board);
+                 system("cls");
+                if (choose ==1){
+                    SET.sett(2, board);
                 }
-                else if (choose ==2)
-                {
-                    do
-                    {
-                            func2.bot_sett(2, board);
-                            system("cls");
-                        board.print_board(board.board11);
+                else if (choose ==2){
+                    do{
+                        board.clearing(2, board);
+                        SET.bot_sett(2, board);
+
+                        board.print_board(board.board22);
 
                         cout << "Якщо подобається розміщення - введіть 1, якщо ні - то 0" << endl;
                         cin >> choice;
                         system("cls");
 
                     }while (choice != 1);
-
-
                 }
-
-
             } while (choose != 1 && choose !=2);
-
-
-            break;
+                break;
         }
         else if (choose == 2)
         {
             system("cls");
               do
             {
-                 cout << "\nОберіть як бажаєте заповнити ігрове поле, 1 - вручну, 2 - рандомно" << endl;
+                 cout << "Оберіть як бажаєте заповнити ігрове поле, 1 - вручну, 2 - рандомно" << endl;
                 cin >> choose;
+                 system("cls");
                 if (choose ==1)
                 {
-                    func2.sett(1, board);
+                    SET.sett(1, board);
                 }
                 else if (choose ==2)
                 {
                     do
                     {
-                        func2.bot_sett(1, board);
-                        system("cls");
+                        board.clearing(1, board);
+                        SET.bot_sett(1, board);
+
                         board.print_board(board.board11);
 
                         cout << "Якщо подобається розміщення - введіть 1, якщо ні - то 0" << endl;
@@ -142,18 +122,13 @@ system("cls");
                         system("cls");
 
                     }while (choice != 1);
-
-
                 }
-
-
             } while (choose != 1 && choose !=2);
             cout << "\nТепер оберіть як бажаєте заповнити ігрове поле, 1 - вручну, 2 - рандомно" << endl;
 
             break;
        }
-        else
-       {
+        else{
             cout << "Неправильне значення. Спробуйте ще раз." << endl;
         }
    }
@@ -161,27 +136,25 @@ system("cls");
     system("cls");
 
 
-    if (game == 0)
-{
-    func2.bot_sett(2, board);
-    func.minuss(board);
+    if (game == 0){
+        SET.bot_sett(2, board);
+        board.minuss(board);
 
      for (int k = 0; k != -1; k++){
         if ( k%2 != 0){
-            func.bot_mov(2, board, 0, 0, 0);
+            MOVE.bot_mov(2, board, 0, 0, 0);
         } else{
-            func.mov(1, board);
+            MOVE.mov(1, board);
         }
     }
 }
-else
-{
-    func.minuss(board);
+else{
+    board.minuss(board);
      for (int k = 0; k != -1; k++){
         if ( k%2 != 0){
-            func.mov(2, board);
+            MOVE.mov(2, board);
         } else{
-            func.mov(1, board);
+            MOVE.mov(1, board);
         }
     }
 
