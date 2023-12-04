@@ -2,7 +2,7 @@
 #include <iostream>
 #include <thread>
 
-using namespace std;
+using std::string, std::cout, std::cin;
 bool setting::canPlaceShip(int shipType, int row, int col, char direction, int board[10][10]) {
     // перевірка чи корабель вміщається на дошку
 
@@ -68,7 +68,7 @@ bool setting::valid_set(string& number, int q1[5], int board[10][10], char board
                     cout << "авіаносців";
                     break;
             }
-            cout << endl;
+            '\n';
             return false;
         }
 
@@ -159,13 +159,13 @@ void setting::sett(int player, Board &board){
              system("cls");
             for (int t = 0; t < 1; t++) {
                   "/n";
-                cout << "        Гравець номер " << player << endl;
-                cout << "        Розставте кораблі:" << endl;
-                cout << " Авіаносець - розмір 5x1 (" << ship[4] << " шт.)" << endl;
-                cout << " Крейсер - розмір 3x1 (" << ship[2] << " шт.)" << endl;
-                cout << " Підводний човен - розмір 2x1 (" << ship[1] << " шт.)" << endl;
-                cout << " Есмінець - розмір 1x1 (" << ship[0] << " шт.)" << endl << "\n";
-                cout << " Кораблі розміщуються по горизонталі, введіть координату де буде розміщено лівий край судна " << endl;
+                cout << "        Гравець номер " << player << "/n";
+                cout << "        Розставте кораблі:" << "/n";
+                cout << " Авіаносець - розмір 5x1 (" << ship[4] << " шт.)" << "/n";
+                cout << " Крейсер - розмір 3x1 (" << ship[2] << " шт.)" << "/n";
+                cout << " Підводний човен - розмір 2x1 (" << ship[1] << " шт.)" << "/n";
+                cout << " Есмінець - розмір 1x1 (" << ship[0] << " шт.)" << "/n" << "\n";
+                cout << " Кораблі розміщуються по горизонталі, введіть координату де буде розміщено лівий край судна " << "/n";
             }
             board.print_board(board33);
             cin >> number;
@@ -177,14 +177,14 @@ void setting::sett(int player, Board &board){
 
             if (direction != 'V' && direction != 'H')
             {
-                cout << "Невірний напрям" << endl;
-                cout << "Введіть коректне значення" << endl;
-                this_thread::sleep_for(chrono::seconds(3));
+                cout << "Невірний напрям" << "/n";
+                cout << "Введіть коректне значення" << "/n";
+                std::this_thread::sleep_for(std::chrono::seconds(3));
             }
             if (ship_type < 1 || ship_type > 5 || ship_type ==4) {
-                cout << "Невірний тип корабля" << endl;
-                cout << "Введіть коректне значення" << endl;
-                this_thread::sleep_for(chrono::seconds(3));
+                cout << "Невірний тип корабля" << "/n";
+                cout << "Введіть коректне значення" << "/n";
+                std::this_thread::sleep_for(std::chrono::seconds(3));
             }  else {
                 valid_set(number, ship, board3, board33, 1);
                 system("cls");

@@ -1,8 +1,6 @@
 #include "Board.h"
 #include <iostream>
 
-using namespace std;
-
 Board::Board() {
     // ініціалізація кількості кораблів кожного типу
     p1[0] = 4; p2[0] = 4; // есмінці, довжина 1

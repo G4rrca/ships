@@ -2,8 +2,8 @@
 #define SETTING_H
 #include "Board.h"
 
-#include <iostream>
-using namespace std;
+using std::string;
+
 class setting{
     public:
 

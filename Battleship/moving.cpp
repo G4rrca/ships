@@ -3,8 +3,7 @@
 #include <iostream>
 #include <thread>
 
-
-using namespace std;
+using std::string, std::cin, std::cout;
 
 bool moving::valid_move(string number, char board[11][11]){
     number[0] = toupper(number[0]);
@@ -163,10 +162,10 @@ void moving::endgame(int board33[10][10], char board3[11][11]){
             for (int j = 0; j < 11; j++) {
                  cout << board3[i][j] << " ";
             }
-             cout << endl;
+             cout << '\n';
         }
-        cout << "Вітаю, ти щойно потопив останній корабель суперника!" << endl;
-        cout << "Гру завершено" << endl;
+        cout << "Вітаю, ти щойно потопив останній корабель суперника!" << '\n';
+        cout << "Гру завершено" << '\n';
         exit(0);
     }
 }
@@ -186,25 +185,25 @@ bool moving::mov(int player, Board &board){
         memcpy(board33, board.board11, sizeof(board33));
         memcpy(board44, board.board22, sizeof(board44));
     }
-    cout << "Гравець " << player << ", ваш хід." << endl;
-    cout << "Дошка суперника" << endl;
+    cout << "Гравець " << player << ", ваш хід." << '\n';
+    cout << "Дошка суперника" << '\n';
     board.print_board(board33);
-    cout << "" << endl;
+    cout << "" << '\n';
 //    board.print_board(board3);
-//      cout << "" << endl;
+//      cout << "" << '\n';
 
-    cout << "Твоя дошка:" << endl;
+    cout << "Твоя дошка:" << '\n';
     board.print_board(board44);
-//      cout << "" << endl;
+//      cout << "" << '\n';
 //    board.print_board(board4);
-//      cout << "" << endl;
+//      cout << "" << '\n';
 
     cout << "Введіть координати атаки (букву рядка і стовпця): ";
     cin >> number;
 
     // Перевірка правильності введених координат і взяття ходу
     while (valid_move(number, board33) == 0){
-            cout << "Невірні координати. Спробуйте ще раз." << endl;
+            cout << "Невірні координати. Спробуйте ще раз." << '\n';
               number = settings.retryInput();
         }
       system("cls");
