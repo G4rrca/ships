@@ -11,8 +11,7 @@ bool moving::valid_move(string number, char board[11][11]){
     char co = number[1];
     int row = ro - 'A';
     int col = co - '0';
-    if (number.length() != 2)
-    {
+    if (number.length() != 2){
         return 0;
     }
 
@@ -250,23 +249,23 @@ void moving::bot_mov(int player, Board &board, bool shot, int prevHitRow, int pr
     }
 
     if (shot) {
-        // If the previous shot was a hit, narrow down the next shot
+        // якщо попередн≥й х≥д був влучним, звузимо рад≥ус наступного удару
         int offset = 1;
 
-        // Reduce the range of random values based on the previous hit coordinates
+        // «меншенн€ д≥апазону випадкових значень на основ≥ попередн≥х координат попаданн€
         int startRow = std::max(0, prevHitRow - offset);
         int endRow = std::min(9, prevHitRow + offset);
         int startCol = std::max(0, prevHitCol - offset);
         int endCol = std::min(9, prevHitCol + offset);
 
-        // Generate random coordinates within the narrowed range
+        // √енерац≥€ випадкових координат ≥з урахуванн€м звуженн€
         int row = startRow + rand() % (endRow - startRow + 1);
         int col = startCol + rand() % (endCol - startCol + 1);
 
         number[0] = static_cast<char>('A' + row);
         number[1] = static_cast<char>('0' + col);
     } else {
-        // If the previous shot was a miss, generate random coordinates as usual
+        // якщо попередн≥й х≥д був промахом, генеруЇмо випадков≥ координати, €к зазвичай
         number[0] = static_cast<char>('A' + rand() % 10);
         number[1] = static_cast<char>('0' + rand() % 10);
     }

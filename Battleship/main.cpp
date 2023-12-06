@@ -96,22 +96,17 @@ void battle(){
             } while (choose != 1 && choose !=2);
                 break;
         }
-        else if (choose == 2)
-        {
+        else if (choose == 2){
             system("cls");
-              do
-            {
-                 cout << "Оберіть як бажаєте заповнити ігрове поле, 1 - вручну, 2 - рандомно"<< '\n';
+            do{
+                cout << "Оберіть як бажаєте заповнити ігрове поле, 1 - вручну, 2 - рандомно"<< '\n';
                 cin >> choose;
                  system("cls");
-                if (choose ==1)
-                {
+                if (choose ==1){
                     SET.sett(1, board);
                 }
-                else if (choose ==2)
-                {
-                    do
-                    {
+                else if (choose ==2){
+                    do{
                         board.clearing(1, board);
                         SET.bot_sett(1, board);
 
@@ -127,7 +122,7 @@ void battle(){
             cout << "\nТепер оберіть як бажаєте заповнити ігрове поле, 1 - вручну, 2 - рандомно"<< '\n';
 
             break;
-       }
+        }
         else{
             cout << "Неправильне значення. Спробуйте ще раз."<< '\n';
         }
@@ -157,9 +152,7 @@ else{
             MOVE.mov(1, board);
         }
     }
-
 }
-
 
 }
 int main() {
