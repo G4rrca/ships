@@ -222,7 +222,9 @@ void setting::bot_sett(int player, Board &board) {
         memcpy(board33, board.board22, sizeof(board33));
         memcpy(ship, board.p2, sizeof(ship));
     }
+    int iterations = 0;
     do {
+
         // число в≥д 1 до 5 перетворюЇтьс€ на символ '1' до '5'
         if (ship[4] != 0) {
             number[0] = static_cast<char>(53);
@@ -257,9 +259,10 @@ void setting::bot_sett(int player, Board &board) {
 
         // “рансформац≥€ типу корабл€ з char у int
         ship_type = number[0] - '0';
-
+         iterations++;
         if (valid_set(number, ship, board3, board33, 0) == 0) {
             // якщо розстановка неправильна, повторити цикл
+
             continue;
         }
 
@@ -276,7 +279,9 @@ void setting::bot_sett(int player, Board &board) {
         if (allShipsPlacedCorrectly) {
             break;
         }
+
     } while (true);
+//    cout << "Iterations: " << iterations << '\n';
      if (player == 1) {
         memcpy(board.board1, board3,  sizeof(board.board1));
         memcpy(board.board11, board33,  sizeof(board.board11));

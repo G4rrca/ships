@@ -69,7 +69,7 @@
 	<iostream>
 	<thread>
 
-1701713287 source:c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\moving.cpp
+1701854832 source:c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\moving.cpp
 	"setting.h"
 	"moving.h"
 	<iostream>
@@ -78,17 +78,17 @@
 1701712559 c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\setting.h
 	"Board.h"
 
-1701276821 c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\board.h
+1701715421 c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\board.h
 	<iostream>
 
-1701713105 c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\moving.h
+1701854833 c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\moving.h
 	"Board.h"
 
 1701712474 source:c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\board.cpp
 	"Board.h"
 	<iostream>
 
-1701713124 source:c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\main.cpp
+1701715422 source:c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\main.cpp
 	<iostream>
 	<cstdlib>
 	<windows.h>
