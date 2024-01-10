@@ -1,0 +1,64 @@
+# depslib dependency file v1.0
+1704896808 source:c:\users\dell\desktop\h\board.cpp
+	"board.h"
+	"ships.h"
+	<iostream>
+
+1704896123 source:c:\users\dell\desktop\h\game.cpp
+	"game.h"
+	"board.h"
+	"ships.h"
+	"set.h"
+	"move.h"
+	<iostream>
+
+1704895972 source:c:\users\dell\desktop\h\move.cpp
+	"set.h"
+	"move.h"
+	<iostream>
+	<thread>
+
+1704876738 source:c:\users\dell\desktop\h\set.cpp
+	"set.h"
+	"ships.h"
+	<iostream>
+	<thread>
+
+1704895986 source:c:\users\dell\desktop\h\ships.cpp
+	"ships.h"
+	"set.h"
+
+1704896215 source:c:\users\dell\desktop\h\main.cpp
+	<iostream>
+	<thread>
+	<windows.h>
+	"game.h"
+	"board.h"
+	"ships.h"
+	"set.h"
+	"move.h"
+
+1704895932 c:\users\dell\desktop\h\board.h
+	"ships.h"
+	<iostream>
+
+1704895932 c:\users\dell\desktop\h\ships.h
+	<iostream>
+	<vector>
+
+1704876278 c:\users\dell\desktop\h\set.h
+	"Board.h"
+	"ships.h"
+
+1704897235 c:\users\dell\desktop\h\move.h
+
+1704896230 c:\users\dell\desktop\h\game.h
+	<iostream>
+	<thread>
+	<windows.h>
+	"game.h"
+	"board.h"
+	"ships.h"
+	"set.h"
+	"move.h"
+

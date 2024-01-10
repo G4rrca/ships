@@ -69,7 +69,7 @@
 	<iostream>
 	<thread>
 
-1701854832 source:c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\moving.cpp
+1702642610 source:c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\moving.cpp
 	"setting.h"
 	"moving.h"
 	<iostream>
@@ -88,7 +88,7 @@
 	"Board.h"
 	<iostream>
 
-1701715422 source:c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\main.cpp
+1704127419 source:c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\main.cpp
 	<iostream>
 	<cstdlib>
 	<windows.h>
@@ -97,7 +97,7 @@
 	"setting.h"
 	"moving.h"
 
-1701713077 source:c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\setting.cpp
+1703966919 source:c:\users\dell\desktop\Матеріали\2-й курс\ООП\oop\ships\battleship\setting.cpp
 	"setting.h"
 	<iostream>
 	<thread>
