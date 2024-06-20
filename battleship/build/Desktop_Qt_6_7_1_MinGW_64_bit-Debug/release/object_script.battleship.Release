@@ -1,0 +1,12 @@
+release/board.o
+release/main.o
+release/mainwindow.o
+release/mainwindow_game.o
+release/mainwindow_sett.o
+release/move.o
+release/set.o
+release/ships.o
+release/qrc_pictures.o
+release/moc_mainwindow.o
+release/moc_mainwindow_game.o
+release/moc_mainwindow_sett.o

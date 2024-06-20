@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/rescources">
+        <file>img/background.png</file>
+        <file>img/background1.png</file>
+        <file>img/field.png</file>
+        <file>img/half28x28.png</file>
+        <file>img/set1000x574.png</file>
+        <file>img/background1000x574.png</file>
+        <file>img/full28x28.png</file>
+        <file>img/dot28x28.png</file>
+        <file>img/main.png</file>
+        <file>img/ship1.png</file>
+        <file>img/ship2.png</file>
+        <file>img/ship3.png</file>
+        <file>img/ship5.png</file>
+    </qresource>
+</RCC>

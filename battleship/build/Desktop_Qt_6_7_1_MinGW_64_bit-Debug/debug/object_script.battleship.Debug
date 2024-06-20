@@ -1,0 +1,12 @@
+debug/board.o
+debug/main.o
+debug/mainwindow.o
+debug/mainwindow_game.o
+debug/mainwindow_sett.o
+debug/move.o
+debug/set.o
+debug/ships.o
+debug/qrc_pictures.o
+debug/moc_mainwindow.o
+debug/moc_mainwindow_game.o
+debug/moc_mainwindow_sett.o
